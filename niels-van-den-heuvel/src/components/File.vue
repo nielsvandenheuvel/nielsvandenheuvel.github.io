@@ -4,7 +4,7 @@
       <span class="title">{{ description ? name + ': ' : name }}</span>
       <span class="description">{{ description }}</span>
     </div>
-    <a v-if="path" :href="path">
+    <a v-if="path" :href="path" target="_blank">
       <font-awesome-icon :icon="['fas', 'file-export']" />
     </a>
     <a v-else class="disabled">

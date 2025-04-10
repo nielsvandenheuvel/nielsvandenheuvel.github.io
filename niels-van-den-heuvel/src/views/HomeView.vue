@@ -48,7 +48,7 @@ const darkmode = useDarkMode()
 
       <h2><font-awesome-icon :icon="['fas', 'file-pen']" class="icon"/>{{ $t('writing-samples') }}</h2>
       <div class="row">
-        <File path="/src/assets/Bachelor___2023.pdf" name="BSc Thesis" description="Nonparametric Bankruptcy Prediction Using Heteroscedastic Survival BART"/>
+        <File path="/public/files/Bachelor___2023.pdf" name="BSc Thesis" description="Nonparametric Bankruptcy Prediction Using Heteroscedastic Survival BART"/>
         <File name="MPhil Thesis" description="TBD"/>
       </div>
 
