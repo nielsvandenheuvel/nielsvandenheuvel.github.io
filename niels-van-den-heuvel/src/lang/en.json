@@ -1,0 +1,25 @@
+{
+  "locale": "English",
+  "darkmode": "Dark",
+  "resume": "Resume",
+  "coding-skills": "Coding skills",
+  "education": "Education",
+  "languages": "Languages",
+  "dutch": "Dutch",
+  "english": "English",
+  "work-experience": "Work Experience",
+
+  "about-me": "Zealous and diligent research master student at the Tinbergen Institute. Has obtained practical experience in combination with a broad theoretical background and a predilection for research. Completed extra-curricular coursework on top of an already demanding double bachelor’s degree. Served as a tutor in secondary- and tertiary education; in the former case being self-employed by a small-scale tutoring company.",
+
+  "tinbergen": {
+    "institute": "Tinbergen Institute, Amsterdam",
+    "period": "2023 - 2025",
+    "description": "<ul><li>Overall GPA: 7.5</li></ul>"
+  },
+
+  "erasmus": {
+    "institute": "Erasmus University, Rotterdam",
+    "period": "2019 - 2023",
+    "description": "<ul><li>Overall GPA: 7.5</li><li>Thesis: Survival Analysis of Bankruptcy Using Heteroscedastic BART (9.0)</li><li>Major (Econometrics): Econometrics (7.1)</li><li>Minor: Advanced Computer Science (8.9)</li><li>Major (Economics): Policy Economics (7.6)</li><li>Electives: Measure Theory (7.5), Ordinary Differential Equations (8.5), University of Amsterdam</li></ul>"
+  }
+}
