@@ -1,11 +1,9 @@
 <template>
   <div class="app">
-    <div class="container">
-      <TheSidebar />
-      <main>
-        <router-view />
-      </main>
-    </div>
+    <TheSidebar />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
@@ -31,18 +29,14 @@ import TheSidebar from './components/TheSidebar.vue'
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row;
 
   background-color: var(--color-bg);
 
-  .container {
-    display: flex;
-    height: 100%;
-
-    main {
-      flex: 1;
-      overflow-y: auto;
-      background-color: var(--color-bg);
-    }
+  main {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--color-bg);
   }
 }
 </style>

@@ -36,6 +36,12 @@ defineProps({
     font-weight: 300;
   }
 
+  @media (max-width: 1000px) {
+    .description {
+      display: none;
+    }
+  }
+
   a {
     color: var(--color-accent);
 

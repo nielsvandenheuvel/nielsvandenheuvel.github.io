@@ -24,6 +24,7 @@ const props = defineProps({
 .education-container {
   padding-top: 15px;
   padding-left: 30px;
+  width: 50vw;
 
   header {
     display: flex;
@@ -52,8 +53,8 @@ const props = defineProps({
       }
 
       .location {
-        color: var(--color-text-vague);
-        font-weight: 500;
+        color: var(--color-accent);
+        font-weight: 300;
       }
     }
 

@@ -43,6 +43,12 @@ watchEffect(() => {
     background-color: transparent;
 
     font-size: 1rem;
+
+    &:focus, &:active {
+      transform: none;
+      outline: none;
+      box-shadow: none;
+    }
   }
 }
 </style>

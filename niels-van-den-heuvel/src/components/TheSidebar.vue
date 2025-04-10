@@ -26,6 +26,7 @@ import DarkMode from '@/components/DarkMode.vue'
 
 <style lang="scss">
 aside {
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: center;
