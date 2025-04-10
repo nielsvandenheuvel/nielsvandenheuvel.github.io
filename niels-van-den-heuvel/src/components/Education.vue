@@ -1,15 +1,20 @@
 <template>
 <div class="education-container">
   <header>
-    <span>{{ $t( name + '.institute') }}</span>
-    <span>{{ $t( name + '.period') }}</span>
+    <div class="title">
+      <span class="period">{{ $t( name + '.period') }}</span>
+      <hr>
+      <span class="institute">{{ $t( name + '.institute') }}</span>
+      <span class="location">{{ $t( name + '.location') }}</span>
+    </div>
+    <img :src="'/src/assets/' + logo" :alt="name + '-logo'">
   </header>
-  <div class="list" v-html="$t( name + '.description')"></div>
+  <div class="description">{{ $t( name + '.description') }}</div>
 </div>
 </template>
 
 <script lang="ts" setup>
-defineProps({
+const props = defineProps({
   logo: String,
   name: String,
 })
@@ -24,10 +29,43 @@ defineProps({
     display: flex;
     flex-direction: auto;
     justify-content: space-between;
+    max-height: 90px;
 
-    span {
-      font-weight: 700;
+    .title {
+      display: flex;
+      flex-direction: column;
+
+      hr {
+        width: 45%;
+        margin-top: 3px;
+        margin-bottom: 5px;
+      }
+
+      .period {
+        color: var(--color-text-vague);
+        font-size: 12px;
+      }
+
+      .institute {
+        font-weight: 700;
+      }
+
+      .location {
+        color: var(--color-text-vague);
+        font-weight: 500;
+      }
     }
+
+    img {
+      height: 90px;
+      max-width: 160px;
+      object-fit: contain;
+    }
+  }
+
+  .description {
+    font-size: 15px;
+    text-align: justify;
   }
 }
 </style>

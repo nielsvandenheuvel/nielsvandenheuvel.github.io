@@ -8,18 +8,49 @@
   "dutch": "Dutch",
   "english": "English",
   "work-experience": "Work Experience",
+  "mphil-graduate": "MPhil Graduate",
 
   "about-me": "Zealous and diligent research master student at the Tinbergen Institute. Has obtained practical experience in combination with a broad theoretical background and a predilection for research. Completed extra-curricular coursework on top of an already demanding double bachelor’s degree. Served as a tutor in secondary- and tertiary education; in the former case being self-employed by a small-scale tutoring company.",
 
   "tinbergen": {
-    "institute": "Tinbergen Institute, Amsterdam",
+    "institute": "Tinbergen Institute",
+    "location": "Amsterdam",
     "period": "2023 - 2025",
-    "description": "<ul><li>Overall GPA: 7.5</li></ul>"
+    "description": "Master of Philosophy in Economics at the Tinbergen Institute. The programme is a two-year joint degree (120 EC) aimed at preparing students for a doctorate at one of the partner universities: Erasmus University Rotterdam, the University of Amsterdam, and Vrij Universiteit Amsterdam."
   },
 
   "erasmus": {
-    "institute": "Erasmus University, Rotterdam",
+    "institute": "Erasmus University",
+    "location": "Rotterdam",
     "period": "2019 - 2023",
-    "description": "<ul><li>Overall GPA: 7.5</li><li>Thesis: Survival Analysis of Bankruptcy Using Heteroscedastic BART (9.0)</li><li>Major (Econometrics): Econometrics (7.1)</li><li>Minor: Advanced Computer Science (8.9)</li><li>Major (Economics): Policy Economics (7.6)</li><li>Electives: Measure Theory (7.5), Ordinary Differential Equations (8.5), University of Amsterdam</li></ul>"
+    "description": "Double Bachelor of Science in Economics and Econometrics at the Erasmus University Rotterdam."
+  },
+
+  "bhrc": {
+    "institute": "Erasmus University",
+    "location": "Rotterdam",
+    "period": "2019 - 2023",
+    "description": "Bachelor Honours Research at Erasmus University Rotterdam."
+  },
+
+  "sba": {
+    "institute": "SBA Business Automation",
+    "location": "H. I. Ambacht",
+    "period": "04/2023 - 04/2024",
+    "description": "."
+  },
+
+  "ta": {
+    "institute": "Tinbergen Institute",
+    "location": "Amsterdam",
+    "period": "10/2024 - 12/2024",
+    "description": "."
+  },
+
+  "dnb": {
+    "institute": "De Nederlandsche Bank",
+    "location": "Amsterdam",
+    "period": "08/2024 - 10/2024",
+    "description": "Intern in the Econometrics & Modelling department at De Nederlandsche Bank. Mainly involved in two major forecasting projects: the Dutch Forecasting model for Real Time Output Growth (DFROG) and the Narrow Inflation Prediction Exercise (NIPE). Implemented theoretical contributions to improve convergence and speed of forecasting within the DFROG. Assisted in visualizing results and computing contributions of different components to inflation in the NIPE project."
   }
 }

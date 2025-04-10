@@ -8,17 +8,20 @@
   "dutch": "Nederlands",
   "english": "Engels",
   "work-experience": "Werk Ervaring",
+  "mphil-graduate": "MSc (Res)",
 
   "about-me": "Enthousiaste en ijverige student aan het Tinbergen Instituut. Heeft praktische ervaring opgedaan in combinatie met een brede theoretische achtergrond en een voorliefde voor onderzoek. Heeft extra-curriculaire vakken gevolgd bovenop een reeds veeleisend dubbel bachelordiploma. Heeft als tutor gewerkt in het voortgezet en hoger onderwijs; in het eerste geval als zelfstandig ondernemer voor een kleinschalig bijlesbedrijf.",
 
   "tinbergen": {
-    "institute": "Tinbergen Instituut, Amsterdam",
+    "institute": "Tinbergen Instituut",
+    "location": "Amsterdam",
     "period": "2023 - 2025",
     "description": "<ul><li>Overall GPA: 7.5</li></ul>"
   },
 
   "erasmus": {
-    "institute": "Erasmus Universiteit, Rotterdam",
+    "institute": "Erasmus Universiteit",
+    "location": "Rotterdam",
     "period": "2019 - 2023",
     "description": "<ul><li>Overall GPA: 7.5</li><li>Thesis: Survival Analysis of Bankruptcy Using Heteroscedastic BART (9.0)</li><li>Major (Econometrics): Econometrics (7.1)</li><li>Minor: Advanced Computer Science (8.9)</li><li>Major (Economics): Policy Economics (7.6)</li><li>Electives: Measure Theory (7.5), Ordinary Differential Equations (8.5), University of Amsterdam</li></ul>"
   }

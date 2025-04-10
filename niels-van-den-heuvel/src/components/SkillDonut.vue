@@ -1,9 +1,9 @@
-<script setup>
+<script lang="ts" setup>
 const props = defineProps({
-  percentage: Number,
-  name: String,
+  percentage: { type: Number, required: true},
+  name: { type: String, required: true},
   size: { type: Number, default: 100 },
-  stroke: { type: Number, default: 10 },
+  stroke: { type: Number, default: 8 },
 })
 
 const radius = (props.size - props.stroke) / 2
@@ -64,7 +64,7 @@ const offset = circumference - (props.percentage / 100) * circumference
     .donut-text {
       fill: var(--color-text);
       font-size: 1.3rem;
-      font-weight: 700;
+      font-weight: 500;
       transform: rotate(90deg);
     }
   }
@@ -72,7 +72,7 @@ const offset = circumference - (props.percentage / 100) * circumference
   .bottom-text {
     margin-top: 10px;
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-text);
   }
 }

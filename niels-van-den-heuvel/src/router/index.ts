@@ -7,7 +7,6 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      icon: 'fas fa-house',
       component: HomeView,
     },
   ],

@@ -24,6 +24,7 @@ import TheSidebar from './components/TheSidebar.vue'
 // }
 
 .app {
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   left: 0;
   top: 0;

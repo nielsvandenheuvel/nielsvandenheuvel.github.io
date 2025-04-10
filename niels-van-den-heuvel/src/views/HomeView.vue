@@ -3,7 +3,9 @@ import Education from '@/components/Education.vue';
 import SkillBar from '@/components/SkillBar.vue';
 import SkillDonut from '@/components/SkillDonut.vue';
 import SkillDots from '@/components/SkillDots.vue';
+import { useDarkMode } from '@/stores/darkmode';
 
+const darkmode = useDarkMode()
 </script>
 
 <template>
@@ -11,13 +13,27 @@ import SkillDots from '@/components/SkillDots.vue';
     <img src="@/assets/portrait.jpg"/>
     <div class="resume">
       <h1>{{ $t('resume') }}</h1>
+      <div class="keywords">
+        <span class="keyword">{{ $t('mphil-graduate') }}</span>
+        <span class="separator">/</span>
+        <span class="keyword">{{ $t('mphil-graduate') }}</span>
+        <span class="separator">/</span>
+        <span class="keyword">{{ $t('mphil-graduate') }}</span></div>
       <span>{{ $t('about-me') }}</span>
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'graduation-cap']" class="icon"/>{{ $t('education') }}</h2>
-      <Education name="tinbergen"/>
-      <Education name="erasmus"/>
+      <div class="row">
+        <div class="col-4"><Education name="tinbergen" :logo="darkmode.isEnabled ? 'tinbergen-dark.png' : 'tinbergen.png'"/></div>
+        <div class="col-4"><Education name="erasmus" :logo="darkmode.isEnabled ? 'erasmus-dark.png' : 'erasmus.png'"/></div>
+        <div class="col-4"><Education name="bhrc" :logo="darkmode.isEnabled ? 'erasmus-dark.png' : 'erasmus.png'"/></div>
+      </div>
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'person-digging']" class="icon"/>{{ $t('work-experience') }}</h2>
+      <div class="row">
+        <div class="col-4"><Education name="dnb" :logo="darkmode.isEnabled ? '' : 'dnb.png'"/></div>
+        <div class="col-4"><Education name="ta" :logo="darkmode.isEnabled ? 'tinbergen-dark.png' : 'tinbergen.png'"/></div>
+        <div class="col-4"><Education name="sba" :logo="darkmode.isEnabled ? '' : 'sba.png'"/></div>
+      </div>
 
       <hr>
       <div class="skills-container">
@@ -64,6 +80,20 @@ img {
   height: 100%;
   width: 64vw;
   overflow-y: auto;
+
+  .keywords {
+    margin: 20px 0;
+
+    .keyword {
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+
+    .separator {
+      margin: 0 20px;
+      font-weight: 400;
+    }
+  }
 
   span {
     color: var(--color-text-vague);

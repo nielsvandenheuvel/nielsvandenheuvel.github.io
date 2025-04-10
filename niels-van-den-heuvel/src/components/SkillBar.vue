@@ -36,7 +36,7 @@ defineProps({
       text-transform: capitalize;
 
       .skill-name {
-        font-weight: 700;
+        font-weight: 500;
       }
 
       .skill-percent {

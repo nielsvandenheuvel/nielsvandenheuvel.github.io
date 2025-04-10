@@ -15,10 +15,10 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
-  name: String,
-  percentage: Number
+  name: { type: String, required: true},
+  percentage: { type: Number, required: true},
 });
 </script>
 
