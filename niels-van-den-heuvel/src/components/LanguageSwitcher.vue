@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-group dropend dropdown">
+  <div class="btn-group dropdown" :class="['dropdown', { dropend: isLargeScreen }]">
     <button
       class="btn"
       type="button"
@@ -28,6 +28,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { watchEffect, computed } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const { locale, availableLocales, messages } = useI18n()
 
@@ -50,10 +51,28 @@ watchEffect(() => {
 const translateLang = (localeCode: string) => {
   return messages.value[localeCode]['locale'] ?? messages.value['en']['locale']
 }
+
+const isLargeScreen = ref(window.innerWidth >= 768)
+
+function handleResize() {
+  isLargeScreen.value = window.innerWidth >= 768
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <style scoped lang="scss">
-.dropdown {
+@media (max-width: 796px) {
+
+}
+
+.btn-group{
   position: relative;
   z-index: 9999;
 
@@ -65,6 +84,61 @@ const translateLang = (localeCode: string) => {
 
     .icon {
       font-size: 1rem;
+    }
+  }
+
+	.dropdown-menu{
+		border: none;
+		background: var(--color-bg);
+		-webkit-box-shadow: 0px 10px 34px -20px var(--color-text-vague);
+		-moz-box-shadow: 0px 10px 34px -20px var(--color-text-vague);
+		box-shadow: 0px 10px 34px -20px var(--color-text-vague);
+		padding: 0;
+		min-width: 18rem;
+		margin-top: 15px;
+		position: relative;
+
+		&:after, &:before{
+			content: ' ';
+		  display: block;
+		  border-style: solid;
+		  border-width: 0 .7em .6em .7em;
+		  border-color: transparent;
+		  position: absolute;
+		  right: 0;
+		  margin-right: 16px;
+		  z-index: -1;
+		}
+		&:before{
+			top: -.6em;
+		  border-bottom-color: var(--color-bg);
+		}
+		&:after{
+			top: -.5em;
+	    border-bottom-color: var(--color-bg);
+		}
+		.dropdown-item{
+			font-size: 16px;
+			color: var(--color-text);
+			font-weight: 400;
+			padding: 15px 30px;
+			position: relative;
+			border-bottom: 1px solid var(--color-text-vague);
+			&:last-child(){
+				border: none;
+			}
+			&:after{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				content: '';
+				width: 4px;
+				opacity: 0;
+			}
+			span{
+				font-size: 20px;
+			}
     }
   }
 }

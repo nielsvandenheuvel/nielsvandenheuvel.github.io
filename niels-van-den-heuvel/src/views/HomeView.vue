@@ -11,7 +11,7 @@ const darkmode = useDarkMode()
 
 <template>
   <div class="container">
-    <div class="resume">
+    <div class="resume pt-5 pb-5 ps-1 pe-1 ps-sm-2 pe-sm-2 ps-md-3 pe-md-3 ps-lg-5 pe-lg-5">
       <header>
         <div class="d-flex flex-row align-items-center">
           <img src="@/assets/portrait.jpg"/>
@@ -54,30 +54,30 @@ const darkmode = useDarkMode()
 
       <hr>
       <div class="row" style="row-gap: 50px;">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
           <h2 class="mb-4"><font-awesome-icon :icon="['fas', 'code']" class="icon"/>{{ $t('coding-skills') }}</h2>
           <div class="row" style="row-gap: 25px;">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="Julia" :percentage="75"/>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="Python" :percentage="65"/>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="Vue.js" :percentage="60"/>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="Matlab" :percentage="70"/>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="R" :percentage="55"/>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-6">
               <SkillDonut name="CodeIgniter" :percentage="80"/>
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-8">
           <h2><font-awesome-icon :icon="['fas', 'language']" class="icon"/>{{ $t('languages') }}</h2>
           <SkillBar :name="$t('dutch')" :percentage="100"/>
           <SkillBar :name="$t('english')" :percentage="95"/>
@@ -88,83 +88,74 @@ const darkmode = useDarkMode()
 </template>
 
 <style lang="scss" scoped>
-main {
-  position: fixed;
+img {
+  height: 30vh;
   left: 70px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+}
 
+@media (max-width: 1000px) {
   img {
-    height: 30vh;
-    left: 70px;
+    display: none;
   }
+}
 
-  @media (max-width: 1000px) {
-    img {
-      display: none;
-    }
-  }
+.resume {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 
-  .resume {
-    display: flex;
-    flex-direction: column;
-    padding: 100px 70px;
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
+  .keywords {
+    margin: 20px 0;
 
-    .keywords {
-      margin: 20px 0;
-
-      .keyword {
-        color: var(--color-accent);
-        font-weight: 500;
-      }
-
-      .separator {
-        margin: 0 20px;
-        font-weight: 400;
-      }
+    .keyword {
+      color: var(--color-accent);
+      font-weight: 500;
     }
 
-    span {
-      color: var(--color-text-vague);
-    }
-
-    hr {
-      margin: 40px 0;
-    }
-
-    h2 {
-      font-size: 30px;
+    .separator {
+      margin: 0 20px;
       font-weight: 400;
-      .icon {
-        color: var(--color-accent);
-        margin-right: 20px;
+    }
+  }
+
+  span {
+    color: var(--color-text-vague);
+  }
+
+  hr {
+    margin: 40px 0;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 400;
+    .icon {
+      color: var(--color-accent);
+      margin-right: 20px;
+    }
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .code-container {
+      max-width: 25%;
+
+      h2 {
+        margin-bottom: 35px;
       }
     }
 
-    .skills-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 20px 0;
-
-      .code-container {
-        max-width: 25%;
-
-        h2 {
-          margin-bottom: 35px;
-        }
-      }
-
-      .language-container {
-        min-width: 71%;
-        max-width: 71%;
-      }
+    .language-container {
+      min-width: 71%;
+      max-width: 71%;
     }
   }
 }

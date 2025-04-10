@@ -71,7 +71,7 @@ const offset = circumference - (props.percentage / 100) * circumference
 
   .bottom-text {
     margin-top: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--color-text);
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app w-100 h-100 d-flex flex-column flex-md-row">
     <TheSidebar />
     <main>
       <router-view />
@@ -26,10 +26,6 @@ import TheSidebar from './components/TheSidebar.vue'
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
 
   background-color: var(--color-bg);
 

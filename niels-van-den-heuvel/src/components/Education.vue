@@ -24,7 +24,6 @@ const props = defineProps({
 .education-container {
   padding-top: 15px;
   padding-left: 30px;
-  width: 50vw;
 
   header {
     display: flex;
