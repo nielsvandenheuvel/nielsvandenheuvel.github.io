@@ -9,6 +9,7 @@
   "english": "English",
   "work-experience": "Work Experience",
   "mphil-graduate": "MPhil Graduate",
+  "writing-samples": "Writing Samples",
 
   "about-me": "Zealous and diligent research master student at the Tinbergen Institute. Has obtained practical experience in combination with a broad theoretical background and a predilection for research. Completed extra-curricular coursework on top of an already demanding double bachelor’s degree. Served as a tutor in secondary- and tertiary education; in the former case being self-employed by a small-scale tutoring company.",
 
@@ -16,35 +17,35 @@
     "institute": "Tinbergen Institute",
     "location": "Amsterdam",
     "period": "2023 - 2025",
-    "description": "Master of Philosophy in Economics at the Tinbergen Institute. The programme is a two-year joint degree (120 EC) aimed at preparing students for a doctorate at one of the partner universities: Erasmus University Rotterdam, the University of Amsterdam, and Vrij Universiteit Amsterdam."
+    "description": "Master of Philosophy in Economics at the Tinbergen Institute. The programme is a two-year joint degree (120 EC) aimed at preparing students for a doctorate at one of the partner universities: Erasmus University Rotterdam, the University of Amsterdam, and the Vrije Universiteit Amsterdam. Specialized in econometrics."
   },
 
   "erasmus": {
     "institute": "Erasmus University",
     "location": "Rotterdam",
     "period": "2019 - 2023",
-    "description": "Double Bachelor of Science in Economics and Econometrics at the Erasmus University Rotterdam."
+    "description": "Double Bachelor of Science in Economics and Econometrics at the Erasmus University Rotterdam. Completed a minor in Computer Science, a major in econometrics, and another major in Policy Economics. Followed external mathematics courses Measure Theory and Ordinary Differential Equations at the UvA."
   },
 
   "bhrc": {
     "institute": "Erasmus University",
     "location": "Rotterdam",
     "period": "2019 - 2023",
-    "description": "Bachelor Honours Research at Erasmus University Rotterdam."
+    "description": "Bachelor Honours Research at Erasmus University Rotterdam. Aimed at ambitious students interested in an academic career. Activities included presenting literature, evaluating research, and a research internship. The research internship was focused on forecasting greenhouse gas emission using a four-factor decomposition. Included topics such as basic forecasting models and inference, and actuarial science."
   },
 
   "sba": {
     "institute": "SBA Business Automation",
     "location": "H. I. Ambacht",
     "period": "04/2023 - 04/2024",
-    "description": "."
+    "description": "Worked as a versatile programmer responsible for both front- as back-end fixes and developments in company-tailored web applications. The programming languages predominantly used were PHP supplemented with CodeIgniter, and HTML, CSS, and JavaScript in the form of the JavaScript framework Vue.js."
   },
 
   "ta": {
     "institute": "Tinbergen Institute",
     "location": "Amsterdam",
     "period": "10/2024 - 12/2024",
-    "description": "."
+    "description": "Teaching assistant for Advanced Mathematics at the Tinbergen Institute. Taught workgroups to a small group of MPhil and PhD students and graded their homework."
   },
 
   "dnb": {
@@ -52,5 +53,19 @@
     "location": "Amsterdam",
     "period": "08/2024 - 10/2024",
     "description": "Intern in the Econometrics & Modelling department at De Nederlandsche Bank. Mainly involved in two major forecasting projects: the Dutch Forecasting model for Real Time Output Growth (DFROG) and the Narrow Inflation Prediction Exercise (NIPE). Implemented theoretical contributions to improve convergence and speed of forecasting within the DFROG. Assisted in visualizing results and computing contributions of different components to inflation in the NIPE project."
+  },
+
+  "simplex": {
+    "institute": "Simplex Student",
+    "location": "Zwijndrecht",
+    "period": "09/2019 - 11/2023",
+    "description": "Along with three partners, managed a small-scale company providing tutoring services to schools and private customers on secondary education. Ran complete administration including employee records and accounting information. Responsible for wage payments, invoicing, tax reporting, and bookkeeping."
+  },
+
+  "vollido": {
+    "institute": "Volleyball Vereniging Vollido",
+    "location": "Hendrik Ido Ambacht",
+    "period": "12/2024 - Present",
+    "description": "Treasurer for the clubhouse at Volleybal Vereniging Vollido. Tasks include, but are not limited to, invoicing, budgeting, and bookkeeping. Created the (CodeIgniter4) backend for the personalized administration module."
   }
 }

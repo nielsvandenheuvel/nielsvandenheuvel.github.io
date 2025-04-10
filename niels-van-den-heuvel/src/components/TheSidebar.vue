@@ -51,6 +51,11 @@ aside {
   }
 
   header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     // Positioning
     position: fixed;
     top: 15px;

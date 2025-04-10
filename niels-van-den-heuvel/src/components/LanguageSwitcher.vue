@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown">
+  <div class="btn-group dropend dropdown">
     <button
       class="btn"
       type="button"
@@ -53,14 +53,19 @@ const translateLang = (localeCode: string) => {
 </script>
 
 <style scoped lang="scss">
-.dropdown > button {
-  color: var(--sidebar-text);
-  background-color: transparent;
+.dropdown {
+  position: relative;
+  z-index: 9999;
 
-  font-size: 0.8rem;
+  button {
+    color: var(--sidebar-text);
+    background-color: transparent;
 
-  .icon {
-    font-size: 0.8rem;
+    font-size: 1rem;
+
+    .icon {
+      font-size: 1rem;
+    }
   }
 }
 </style>

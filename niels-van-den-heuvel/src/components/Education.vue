@@ -7,7 +7,7 @@
       <span class="institute">{{ $t( name + '.institute') }}</span>
       <span class="location">{{ $t( name + '.location') }}</span>
     </div>
-    <img :src="'/src/assets/' + logo" :alt="name + '-logo'">
+    <img :src="'/src/assets/' + logo" :alt="name + '-logo'" v-if="logo">
   </header>
   <div class="description">{{ $t( name + '.description') }}</div>
 </div>
@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 const props = defineProps({
   logo: String,
-  name: String,
+  name: { type: String, required: true },
 })
 </script>
 
@@ -30,6 +30,7 @@ const props = defineProps({
     flex-direction: auto;
     justify-content: space-between;
     max-height: 90px;
+    margin-bottom: 13px;
 
     .title {
       display: flex;
@@ -65,7 +66,7 @@ const props = defineProps({
 
   .description {
     font-size: 15px;
-    text-align: justify;
+    line-height: 1.8;
   }
 }
 </style>

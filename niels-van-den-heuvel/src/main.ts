@@ -19,6 +19,8 @@ import {
   faGraduationCap,
   faLanguage,
   faPersonDigging,
+  faFileExport,
+  faFilePen,
 } from '@fortawesome/free-solid-svg-icons'
 library.add(
   faCloudArrowDown,
@@ -29,7 +31,9 @@ library.add(
   faCode,
   faGraduationCap,
   faLanguage,
-  faPersonDigging
+  faPersonDigging,
+  faFileExport,
+  faFilePen
 )
 
 // Bootstrap

@@ -3,6 +3,7 @@ import Education from '@/components/Education.vue';
 import SkillBar from '@/components/SkillBar.vue';
 import SkillDonut from '@/components/SkillDonut.vue';
 import SkillDots from '@/components/SkillDots.vue';
+import File from '@/components/File.vue';
 import { useDarkMode } from '@/stores/darkmode';
 
 const darkmode = useDarkMode()
@@ -23,16 +24,32 @@ const darkmode = useDarkMode()
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'graduation-cap']" class="icon"/>{{ $t('education') }}</h2>
       <div class="row">
-        <div class="col-4"><Education name="tinbergen" :logo="darkmode.isEnabled ? 'tinbergen-dark.png' : 'tinbergen.png'"/></div>
-        <div class="col-4"><Education name="erasmus" :logo="darkmode.isEnabled ? 'erasmus-dark.png' : 'erasmus.png'"/></div>
-        <div class="col-4"><Education name="bhrc" :logo="darkmode.isEnabled ? 'erasmus-dark.png' : 'erasmus.png'"/></div>
+        <div class="col-4"><Education name="tinbergen"/></div>
+        <div class="col-4"><Education name="erasmus"/></div>
+        <div class="col-4"><Education name="bhrc"/></div>
       </div>
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'person-digging']" class="icon"/>{{ $t('work-experience') }}</h2>
       <div class="row">
-        <div class="col-4"><Education name="dnb" :logo="darkmode.isEnabled ? '' : 'dnb.png'"/></div>
-        <div class="col-4"><Education name="ta" :logo="darkmode.isEnabled ? 'tinbergen-dark.png' : 'tinbergen.png'"/></div>
-        <div class="col-4"><Education name="sba" :logo="darkmode.isEnabled ? '' : 'sba.png'"/></div>
+        <div class="col-8">
+          <div class="row">
+            <div class="col-6"><Education name="vollido"/></div>
+            <div class="col-6"><Education name="ta"/></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6"><Education name="sba"/></div>
+            <div class="col-6"><Education name="simplex"/></div>
+          </div>
+        </div>
+        <div class="col-4"><Education name="dnb"/></div>
+      </div>
+
+      <hr>
+
+      <h2><font-awesome-icon :icon="['fas', 'file-pen']" class="icon"/>{{ $t('writing-samples') }}</h2>
+      <div class="row">
+        <File path="/src/assets/Bachelor___2023.pdf" name="BSc Thesis" description="Nonparametric Bankruptcy Prediction Using Heteroscedastic Survival BART"/>
+        <File name="MPhil Thesis" description="TBD"/>
       </div>
 
       <hr>
@@ -40,22 +57,22 @@ const darkmode = useDarkMode()
         <div class="code-container">
           <h2><font-awesome-icon :icon="['fas', 'code']" class="icon"/>{{ $t('coding-skills') }}</h2>
           <div class="row">
-            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Julia" :percentage="80"/></div>
-            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Python" :percentage="80"/></div>
+            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Julia" :percentage="75"/></div>
+            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Python" :percentage="65"/></div>
           </div>
           <div class="row">
-            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Matlab" :percentage="80"/></div>
-            <div class="col-md-6 col-12 mb-4"><SkillDonut name="R" :percentage="80"/></div>
+            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Matlab" :percentage="70"/></div>
+            <div class="col-md-6 col-12 mb-4"><SkillDonut name="R" :percentage="55"/></div>
           </div>
           <div class="row">
             <div class="col-md-6 col-12 mb-4"><SkillDonut name="CodeIgntier/PHP" :percentage="80"/></div>
-            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Vue.js" :percentage="80"/></div>
+            <div class="col-md-6 col-12 mb-4"><SkillDonut name="Vue.js" :percentage="60"/></div>
           </div>
         </div>
         <div class="language-container">
           <h2><font-awesome-icon :icon="['fas', 'language']" class="icon"/>{{ $t('languages') }}</h2>
-          <SkillBar :name="$t('dutch')" :percentage="80"/>
-          <SkillBar :name="$t('english')" :percentage="80"/>
+          <SkillBar :name="$t('dutch')" :percentage="100"/>
+          <SkillBar :name="$t('english')" :percentage="95"/>
         </div>
       </div>
     </div>
@@ -67,6 +84,7 @@ img {
   position: fixed;
   height: 100vh;
   left: 70px;
+  z-index: 0;
 }
 
 .resume {

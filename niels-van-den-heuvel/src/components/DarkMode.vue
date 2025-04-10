@@ -33,6 +33,7 @@ watchEffect(() => {
   white-space: nowrap;
   vertical-align: middle;
   padding: 0.375rem 0.75rem;
+  margin-bottom: 8px;
   transition:
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out;
@@ -41,7 +42,7 @@ watchEffect(() => {
     color: var(--color-accent);
     background-color: transparent;
 
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 </style>
