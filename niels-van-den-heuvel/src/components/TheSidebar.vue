@@ -4,16 +4,14 @@
       <DarkMode />
       <LanguageSwitcher />
     </header>
-
-    <footer>
-      <font-awesome-icon :icon="['fas', 'cloud-arrow-down']" class="icon"/>
-    </footer>
+    <PDFDownloader />
   </aside>
 </template>
 
 <script lang="ts" setup>
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import DarkMode from '@/components/DarkMode.vue'
+import PDFDownloader from './PDFDownloader.vue';
 </script>
 
 <style lang="scss">
@@ -42,6 +40,10 @@ aside {
   left: 0;
   padding: 15px 0;
 
+  -webkit-box-shadow: 0px 10px 34px -20px var(--color-shadow);
+  -moz-box-shadow: 0px 10px 34px -20px var(--color-shadow);
+  box-shadow: 0px 10px 34px -20px var(--color-shadow);
+
   // Sizing
   height: 100%;
   min-width: 70px;
@@ -55,12 +57,6 @@ aside {
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    font-size: 1.6rem;
   }
 
   .item {

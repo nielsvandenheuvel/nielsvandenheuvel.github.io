@@ -21,6 +21,15 @@ import {
   faPersonDigging,
   faFileExport,
   faFilePen,
+  faWrench,
+  faGear,
+  faMagnifyingGlass,
+  faDatabase,
+  faChartPie,
+  faComments,
+  faPeopleGroup,
+  faBolt,
+  faGlasses,
 } from '@fortawesome/free-solid-svg-icons'
 library.add(
   faCloudArrowDown,
@@ -33,7 +42,16 @@ library.add(
   faLanguage,
   faPersonDigging,
   faFileExport,
-  faFilePen
+  faFilePen,
+  faWrench,
+  faGear,
+  faMagnifyingGlass,
+  faDatabase,
+  faChartPie,
+  faComments,
+  faPeopleGroup,
+  faBolt,
+  faGlasses
 )
 
 // Bootstrap

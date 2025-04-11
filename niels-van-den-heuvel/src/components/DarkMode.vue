@@ -32,14 +32,13 @@ watchEffect(() => {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  padding: 0.375rem 0.75rem;
   margin-bottom: 8px;
   transition:
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out;
 
   button {
-    color: var(--color-accent);
+    color: var(--color-text-vague);
     background-color: transparent;
 
     font-size: 1rem;
@@ -48,6 +47,10 @@ watchEffect(() => {
       transform: none;
       outline: none;
       box-shadow: none;
+    }
+
+    &:hover {
+      color: var(--color-accent);
     }
   }
 }

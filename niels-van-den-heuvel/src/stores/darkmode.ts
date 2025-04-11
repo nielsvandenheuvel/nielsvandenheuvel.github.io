@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 export const useDarkMode = defineStore('darkmode', {
-  state: () => ({ isEnabled: true }),
+  state: () => ({ isEnabled: false }),
   actions: {
     toggle() {
       this.isEnabled = !this.isEnabled

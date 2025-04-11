@@ -1,7 +1,7 @@
 <template>
   <div class="app w-100 h-100 d-flex flex-column flex-md-row">
     <TheSidebar />
-    <main>
+    <main id="pdf-content">
       <router-view />
     </main>
   </div>

@@ -18,9 +18,9 @@ const darkmode = useDarkMode()
           <div class="m-5">
           <h1>{{ $t('resume') }}</h1>
             <div class="keywords">
-              <span class="keyword">{{ $t('mphil-graduate') }}</span>
+              <span class="keyword">{{ $t('econometrics') }}</span>
               <span class="separator">/</span>
-              <span class="keyword">{{ $t('mphil-graduate') }}</span>
+              <span class="keyword">{{ $t('avid-programmer') }}</span>
               <span class="separator">/</span>
               <span class="keyword">{{ $t('mphil-graduate') }}</span></div>
               <span>{{ $t('about-me') }}</span>
@@ -30,17 +30,17 @@ const darkmode = useDarkMode()
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'graduation-cap']" class="icon"/>{{ $t('education') }}</h2>
       <div class="d-flex flex-wrap p-2 gap-4">
-        <Education name="tinbergen"/>
-        <Education name="erasmus"/>
+        <Education name="tinbergen" link="https://tinbergen.nl/graduate-program"/>
+        <Education name="erasmus" link="https://www.eur.nl/en/bachelor/double-bachelor-bsc2-econometrics-and-economics"/>
         <Education name="bhrc"/>
       </div>
       <hr>
       <h2><font-awesome-icon :icon="['fas', 'person-digging']" class="icon"/>{{ $t('work-experience') }}</h2>
       <div class="d-flex flex-wrap p-2 gap-4">
-        <Education name="vollido"/>
-        <Education name="ta"/>
-        <Education name="dnb"/>
-        <Education name="sba"/>
+        <Education name="vollido" link="https://vvvollido.nl/"/>
+        <Education name="ta" link="https://tinbergen.nl/graduate-program"/>
+        <Education name="dnb" link="https://www.dnb.nl/en/research/dnb-s-econometric-models/"/>
+        <Education name="sba" :link="'https://site.sba.nl/?lang=en'"/>
         <Education name="simplex"/>
       </div>
 
@@ -78,9 +78,54 @@ const darkmode = useDarkMode()
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-8">
-          <h2><font-awesome-icon :icon="['fas', 'language']" class="icon"/>{{ $t('languages') }}</h2>
-          <SkillBar :name="$t('dutch')" :percentage="100"/>
-          <SkillBar :name="$t('english')" :percentage="95"/>
+          <div class="row">
+            <h2><font-awesome-icon :icon="['fas', 'language']" class="icon"/>{{ $t('languages') }}</h2>
+            <div class="row ms-3">
+              <SkillBar :name="$t('dutch')" :percentage="100"/>
+              <SkillBar :name="$t('english')" :percentage="95"/>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <h2><font-awesome-icon :icon="['fas', 'wrench']" class="icon"/>{{ $t('other-skills') }}</h2>
+            <div class="other-skills-container row mt-3 ms-3">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'chart-pie']" /></div>
+                    <div class="col-11">{{ $t('statistics') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'magnifying-glass']" /></div>
+                    <div class="col-11">{{ $t('research') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'cog']" /></div>
+                    <div class="col-11">{{ $t('backend') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'database']" /></div>
+                    <div class="col-11">{{ $t('database') }}</div>
+                  </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'comments']" /></div>
+                    <div class="col-11">{{ $t('communicative') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'people-group']" /></div>
+                    <div class="col-11">{{ $t('team-player') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'bolt']" /></div>
+                    <div class="col-11">{{ $t('energetic') }}</div>
+                  </div>
+                  <div class="skill row">
+                    <div class="col-1"><font-awesome-icon class="icon" :icon="['fas', 'glasses']" /></div>
+                    <div class="col-11">{{ $t('critical-thinker') }}</div>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -139,23 +184,14 @@ img {
     }
   }
 
-  .skills-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 0;
+  .other-skills-container {
 
-    .code-container {
-      max-width: 25%;
+    .skill {
+      margin-bottom: 7px;
 
-      h2 {
-        margin-bottom: 35px;
+      .icon {
+        color: var(--color-accent);
       }
-    }
-
-    .language-container {
-      min-width: 71%;
-      max-width: 71%;
     }
   }
 }

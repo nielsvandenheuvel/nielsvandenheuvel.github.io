@@ -14,6 +14,7 @@
     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
       <button
         class="dropdown-item"
+        :style="lang == currentLocale ? { color: 'var(--color-accent)', fontWeight: 600 } : {}"
         type="button"
         v-for="lang in availableLocales"
         :key="lang"
@@ -73,11 +74,10 @@ onBeforeUnmount(() => {
 }
 
 .btn-group{
-  position: relative;
   z-index: 9999;
 
   button {
-    color: var(--sidebar-text);
+    color: var(--color-text-vague);
     background-color: transparent;
 
     font-size: 1rem;
@@ -85,18 +85,24 @@ onBeforeUnmount(() => {
     .icon {
       font-size: 1rem;
     }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &:focus {
+      border: none;
+    }
   }
 
 	.dropdown-menu{
 		border: none;
 		background: var(--color-bg);
-		-webkit-box-shadow: 0px 10px 34px -20px var(--color-text-vague);
-		-moz-box-shadow: 0px 10px 34px -20px var(--color-text-vague);
-		box-shadow: 0px 10px 34px -20px var(--color-text-vague);
+		-webkit-box-shadow: 0px 10px 34px -20px var(--color-shadow);
+		-moz-box-shadow: 0px 10px 34px -20px var(--color-shadow);
+		box-shadow: 0px 10px 34px -20px var(--color-shadow);
 		padding: 0;
 		min-width: 18rem;
-		margin-top: 15px;
-		position: relative;
 
 		&:after, &:before{
 			content: ' ';
@@ -120,10 +126,13 @@ onBeforeUnmount(() => {
 		.dropdown-item{
 			font-size: 16px;
 			color: var(--color-text);
-			font-weight: 400;
+			font-weight: 300;
 			padding: 15px 30px;
 			position: relative;
-			border-bottom: 1px solid var(--color-text-vague);
+			border-bottom: 1px solid var(--color-shadow);
+      .active {
+        color: var(--color-accent);
+      }
 			&:last-child(){
 				border: none;
 			}

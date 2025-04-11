@@ -2,9 +2,11 @@
 <div class="education-container">
   <header>
     <div class="title">
-      <span class="period">{{ $t( name + '.period') }}</span>
-      <hr>
-      <span class="institute">{{ $t( name + '.institute') }}</span>
+      <div class="period">
+        <span>{{ $t( name + '.period') }}</span>
+        <hr>
+      </div>
+      <a :href="link" target="_blank" class="institute" :class="{ 'enabled': link }">{{ $t( name + '.institute') }}</a>
       <span class="location">{{ $t( name + '.location') }}</span>
     </div>
     <img :src="'/src/assets/' + logo" :alt="name + '-logo'" v-if="logo">
@@ -14,8 +16,9 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   logo: String,
+  link: String,
   name: { type: String, required: true },
 })
 </script>
@@ -36,15 +39,29 @@ const props = defineProps({
       display: flex;
       flex-direction: column;
 
-      hr {
-        width: 45%;
-        margin-top: 3px;
-        margin-bottom: 5px;
+      a {
+        padding: 0;
+        color: var(--color-text);
+        text-decoration: none;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      .enabled:hover {
+        cursor: pointer;
       }
 
       .period {
         color: var(--color-text-vague);
         font-size: 12px;
+
+        hr {
+          width: 100%;
+          margin-top: 3px;
+          margin-bottom: 5px;
+        }
       }
 
       .institute {
