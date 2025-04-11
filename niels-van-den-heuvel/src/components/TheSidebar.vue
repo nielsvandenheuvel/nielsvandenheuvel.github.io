@@ -4,14 +4,12 @@
       <DarkMode />
       <LanguageSwitcher />
     </header>
-    <PDFDownloader />
   </aside>
 </template>
 
 <script lang="ts" setup>
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import DarkMode from '@/components/DarkMode.vue'
-import PDFDownloader from './PDFDownloader.vue';
 </script>
 
 <style lang="scss">
