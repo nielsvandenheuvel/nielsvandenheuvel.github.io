@@ -1,0 +1,15 @@
+:root {
+  --color-bg: white;
+  --color-text: black;
+  --color-text-vague: gray;
+  --color-accent: rgb(207, 27, 27);
+  --color-shadow: rgb(204, 204, 204);
+}
+
+[theme="dark"] {
+  --color-bg: rgb(36, 36, 36);
+  --color-text: white;
+  --color-text-vague: gray;
+  --color-accent: rgb(207, 27, 27);
+  --color-shadow: rgb(61, 61, 61);
+}
